@@ -7,38 +7,38 @@ const Navigation = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   const menuItems = [
-    { label: 'Ana Sayfa', href: '#home' },
+    { label: 'Startseite', href: '#home' },
     { 
-      label: 'Satılık', 
-      href: '#satilik',
+      label: 'Verkauf', 
+      href: '#verkauf',
       submenu: [
-        { label: 'Daireler', href: '#satilik-daireler' },
-        { label: 'Villalar', href: '#satilik-villalar' },
-        { label: 'Arsalar', href: '#satilik-arsalar' },
-        { label: 'Ticari', href: '#satilik-ticari' }
+        { label: 'Wohnungen', href: '#verkauf-wohnungen' },
+        { label: 'Häuser', href: '#verkauf-haeuser' },
+        { label: 'Grundstücke', href: '#verkauf-grundstuecke' },
+        { label: 'Gewerbe', href: '#verkauf-gewerbe' }
       ]
     },
     { 
-      label: 'Kiralık', 
-      href: '#kiralik',
+      label: 'Vermietung', 
+      href: '#vermietung',
       submenu: [
-        { label: 'Daireler', href: '#kiralik-daireler' },
-        { label: 'Villalar', href: '#kiralik-villalar' },
-        { label: 'Ticari', href: '#kiralik-ticari' }
+        { label: 'Wohnungen', href: '#vermietung-wohnungen' },
+        { label: 'Häuser', href: '#vermietung-haeuser' },
+        { label: 'Gewerbe', href: '#vermietung-gewerbe' }
       ]
     },
     { 
-      label: 'Hizmetler', 
-      href: '#hizmetler',
+      label: 'Dienstleistungen', 
+      href: '#dienstleistungen',
       submenu: [
-        { label: 'Emlak Değerleme', href: '#degerleme' },
-        { label: 'Emlak Danışmanlığı', href: '#danismanlik' },
-        { label: 'Yatırım Danışmanlığı', href: '#yatirim' },
-        { label: 'Emlak Yönetimi', href: '#yonetim' }
+        { label: 'Immobilienbewertung', href: '#bewertung' },
+        { label: 'Immobilienberatung', href: '#beratung' },
+        { label: 'Anlageberatung', href: '#anlageberatung' },
+        { label: 'Hausverwaltung', href: '#hausverwaltung' }
       ]
     },
-    { label: 'Hakkımızda', href: '#hakkimizda' },
-    { label: 'İletişim', href: '#iletisim' },
+    { label: 'Über uns', href: '#ueber-uns' },
+    { label: 'Kontakt', href: '#kontakt' },
   ];
 
   const handleDropdownToggle = (label: string) => {

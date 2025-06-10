@@ -15,7 +15,6 @@ const Footer = () => {
                 alt="Karim Immobilien Logo"
                 className="h-10 w-auto"
               />
-              <span className="text-xl font-bold">Karim Immobilien</span>
             </div>
             <p className="text-gray-400 leading-relaxed">
               Mit 25 Jahren Erfahrung sind wir Ihr vertrauensvoller Partner im deutschen Immobilienmarkt. 
@@ -41,11 +40,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Schnelllinks</h3>
             <ul className="space-y-3">
-              <li><a href="#home" className="text-gray-400 hover:text-white transition-colors">Startseite</a></li>
-              <li><a href="#properties" className="text-gray-400 hover:text-white transition-colors">Immobilien</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Dienstleistungen</a></li>
-              <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">Über uns</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Kontakt</a></li>
+              <li><a href="#startseite" className="text-gray-400 hover:text-white transition-colors">Startseite</a></li>
+              <li><a href="#immobilien-portfolio" className="text-gray-400 hover:text-white transition-colors">Immobilien-Portfolio</a></li>
+              <li><a href="#immobilienverkauf" className="text-gray-400 hover:text-white transition-colors">Immobilienverkauf</a></li>
+              <li><a href="#vermietung" className="text-gray-400 hover:text-white transition-colors">Vermietung</a></li>
+              <li><a href="#kontakt" className="text-gray-400 hover:text-white transition-colors">Kontakt</a></li>
             </ul>
           </div>
 
@@ -53,11 +52,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Unsere Dienstleistungen</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Immobilienverkauf</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Immobilienbewertung</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Vermietungsservice</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Investmentberatung</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Rechtsberatung</a></li>
+              <li><a href="#immobilienverkauf" className="text-gray-400 hover:text-white transition-colors">Immobilienverkauf</a></li>
+              <li><a href="#immobilienbewertung" className="text-gray-400 hover:text-white transition-colors">Immobilienbewertung</a></li>
+              <li><a href="#vermietung" className="text-gray-400 hover:text-white transition-colors">Vermietungsservice</a></li>
+              <li><a href="#einkauf" className="text-gray-400 hover:text-white transition-colors">Einkauf</a></li>
+              <li><a href="#discrete-sale" className="text-gray-400 hover:text-white transition-colors">Discrete Sale</a></li>
             </ul>
           </div>
 
@@ -67,7 +66,11 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary" />
-                <span className="text-gray-400">+49 123 456 789</span>
+                <span className="text-gray-400">+49 (0) 761 / 152 298 545</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-primary" />
+                <span className="text-gray-400">+49 (0) 179 / 618 77 00</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary" />
@@ -76,8 +79,8 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary mt-1" />
                 <div className="text-gray-400">
-                  <p>Hauptstraße 123</p>
-                  <p>10115 Berlin, Deutschland</p>
+                  <p>Mühlhauser Straße 10</p>
+                  <p>DE-79110 Freiburg i. Br.</p>
                 </div>
               </div>
             </div>

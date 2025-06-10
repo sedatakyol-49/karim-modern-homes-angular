@@ -7,38 +7,16 @@ const Navigation = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   const menuItems = [
-    { label: 'Startseite', href: '#home' },
-    { 
-      label: 'Verkauf', 
-      href: '#verkauf',
-      submenu: [
-        { label: 'Wohnungen', href: '#verkauf-wohnungen' },
-        { label: 'Häuser', href: '#verkauf-haeuser' },
-        { label: 'Grundstücke', href: '#verkauf-grundstuecke' },
-        { label: 'Gewerbe', href: '#verkauf-gewerbe' }
-      ]
-    },
-    { 
-      label: 'Vermietung', 
-      href: '#vermietung',
-      submenu: [
-        { label: 'Wohnungen', href: '#vermietung-wohnungen' },
-        { label: 'Häuser', href: '#vermietung-haeuser' },
-        { label: 'Gewerbe', href: '#vermietung-gewerbe' }
-      ]
-    },
-    { 
-      label: 'Dienstleistungen', 
-      href: '#dienstleistungen',
-      submenu: [
-        { label: 'Immobilienbewertung', href: '#bewertung' },
-        { label: 'Immobilienberatung', href: '#beratung' },
-        { label: 'Anlageberatung', href: '#anlageberatung' },
-        { label: 'Hausverwaltung', href: '#hausverwaltung' }
-      ]
-    },
-    { label: 'Über uns', href: '#ueber-uns' },
-    { label: 'Kontakt', href: '#kontakt' },
+    { label: 'STARTSEITE', href: '#startseite' },
+    { label: 'IMMOBILIEN-PORTFOLIO', href: '#immobilien-portfolio' },
+    { label: 'IMMOBILIENVERKAUF', href: '#immobilienverkauf' },
+    { label: 'VERMIETUNG', href: '#vermietung' },
+    { label: 'IMMOBILIENBEWERTUNG', href: '#immobilienbewertung' },
+    { label: 'EINKAUF', href: '#einkauf' },
+    { label: 'DISCRETE SALE', href: '#discrete-sale' },
+    { label: 'PROVISION', href: '#provision' },
+    { label: 'ÜBER KARIM IMMOBILIEN', href: '#ueber-karim-immobilien' },
+    { label: 'KONTAKT', href: '#kontakt' },
   ];
 
   const handleDropdownToggle = (label: string) => {
@@ -56,50 +34,18 @@ const Navigation = () => {
               alt="Karim Immobilien Logo"
               className="h-12 w-auto"
             />
-            <span className="text-2xl font-bold gradient-text hidden sm:block">Karim Immobilien</span>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-1">
             {menuItems.map((item) => (
-              <div key={item.label} className="relative group">
-                {item.submenu ? (
-                  <>
-                    <button
-                      className="flex items-center space-x-1 text-foreground hover:text-primary transition-colors duration-300 font-medium px-4 py-2 rounded-lg hover:bg-accent/10"
-                      onMouseEnter={() => setOpenDropdown(item.label)}
-                      onMouseLeave={() => setOpenDropdown(null)}
-                    >
-                      <span>{item.label}</span>
-                      <ChevronDown className="w-4 h-4" />
-                    </button>
-                    {openDropdown === item.label && (
-                      <div 
-                        className="absolute top-full left-0 mt-1 bg-white border border-border rounded-lg shadow-lg py-2 min-w-48 z-50"
-                        onMouseEnter={() => setOpenDropdown(item.label)}
-                        onMouseLeave={() => setOpenDropdown(null)}
-                      >
-                        {item.submenu.map((subItem) => (
-                          <a
-                            key={subItem.label}
-                            href={subItem.href}
-                            className="block px-4 py-2 text-foreground hover:text-primary hover:bg-accent/10 transition-colors"
-                          >
-                            {subItem.label}
-                          </a>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <a
-                    href={item.href}
-                    className="text-foreground hover:text-primary transition-colors duration-300 font-medium px-4 py-2 rounded-lg hover:bg-accent/10"
-                  >
-                    {item.label}
-                  </a>
-                )}
-              </div>
+              <a
+                key={item.label}
+                href={item.href}
+                className="text-foreground hover:text-primary transition-colors duration-300 font-medium px-3 py-2 rounded-lg hover:bg-accent/10 text-sm"
+              >
+                {item.label}
+              </a>
             ))}
           </div>
 
@@ -107,7 +53,7 @@ const Navigation = () => {
           <div className="hidden xl:flex items-center space-x-4 text-sm text-muted-foreground">
             <div className="flex items-center space-x-1">
               <Phone className="w-4 h-4" />
-              <span>+49 123 456 789</span>
+              <span>+49 (0) 761 / 152 298 545</span>
             </div>
             <div className="flex items-center space-x-1">
               <Mail className="w-4 h-4" />
@@ -128,50 +74,30 @@ const Navigation = () => {
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-border">
             {menuItems.map((item) => (
-              <div key={item.label}>
-                {item.submenu ? (
-                  <>
-                    <button
-                      onClick={() => handleDropdownToggle(item.label)}
-                      className="flex items-center justify-between w-full py-3 text-foreground hover:text-primary transition-colors"
-                    >
-                      <span>{item.label}</span>
-                      <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === item.label ? 'rotate-180' : ''}`} />
-                    </button>
-                    {openDropdown === item.label && (
-                      <div className="pl-4 pb-2">
-                        {item.submenu.map((subItem) => (
-                          <a
-                            key={subItem.label}
-                            href={subItem.href}
-                            className="block py-2 text-muted-foreground hover:text-primary transition-colors"
-                            onClick={() => setIsMenuOpen(false)}
-                          >
-                            {subItem.label}
-                          </a>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <a
-                    href={item.href}
-                    className="block py-3 text-foreground hover:text-primary transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.label}
-                  </a>
-                )}
-              </div>
+              <a
+                key={item.label}
+                href={item.href}
+                className="block py-3 text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.label}
+              </a>
             ))}
             <div className="mt-4 pt-4 border-t border-border space-y-2 text-sm text-muted-foreground">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>+49 123 456 789</span>
+                <span>+49 (0) 761 / 152 298 545</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
                 <span>info@karim-immobilien.de</span>
+              </div>
+              <div className="flex items-start space-x-2">
+                <MapPin className="w-4 h-4 mt-1" />
+                <div>
+                  <p>Mühlhauser Straße 10</p>
+                  <p>DE-79110 Freiburg i. Br.</p>
+                </div>
               </div>
             </div>
           </div>

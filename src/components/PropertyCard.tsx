@@ -80,7 +80,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
             {price}
           </div>
           <Button className="bg-primary hover:bg-primary/90 text-white">
-            Detaylar
+            Details
           </Button>
         </div>
       </div>

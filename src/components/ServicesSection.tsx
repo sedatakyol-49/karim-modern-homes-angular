@@ -6,33 +6,33 @@ const ServicesSection = () => {
   const services = [
     {
       icon: Home,
-      title: "Gayrimenkul Satışı",
-      description: "Evinizi en iyi fiyata satmanız için profesyonel destek ve pazar analizi"
+      title: "Immobilienverkauf",
+      description: "Professionelle Unterstützung und Marktanalyse für den besten Verkaufspreis Ihrer Immobilie"
     },
     {
       icon: Calculator,
-      title: "Emlak Değerlendirmesi",
-      description: "Gayrimenkulünüzün gerçek pazar değerini belirleme hizmeti"
+      title: "Immobilienbewertung",
+      description: "Ermittlung des realen Marktwerts Ihrer Immobilie durch unsere Experten"
     },
     {
       icon: FileText,
-      title: "Hukuki Danışmanlık",
-      description: "Alım-satım sürecinde tüm hukuki işlemleriniz için uzman desteği"
+      title: "Rechtsberatung",
+      description: "Expertenhilfe für alle rechtlichen Angelegenheiten im Kauf- und Verkaufsprozess"
     },
     {
       icon: Users,
-      title: "Kiralama Hizmetleri",
-      description: "Gayrimenkulünüz için en uygun kiracıyı bulma ve yönetim hizmetleri"
+      title: "Vermietungsservice",
+      description: "Wir finden den passenden Mieter für Ihre Immobilie und übernehmen die Verwaltung"
     },
     {
       icon: TrendingUp,
-      title: "Yatırım Danışmanlığı",
-      description: "Karlı gayrimenkul yatırımları için profesyonel rehberlik"
+      title: "Investmentberatung",
+      description: "Professionelle Beratung für rentable Immobilieninvestitionen"
     },
     {
       icon: Shield,
-      title: "Sigorta Hizmetleri",
-      description: "Gayrimenkulünüzü koruma altına alan kapsamlı sigorta çözümleri"
+      title: "Versicherungsservice",
+      description: "Umfassende Versicherungslösungen zum Schutz Ihrer Immobilie"
     }
   ];
 
@@ -41,10 +41,10 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            <span className="gradient-text">Hizmetlerimiz</span>
+            <span className="gradient-text">Unsere Dienstleistungen</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Gayrimenkul ihtiyaçlarınız için kapsamlı çözümler sunuyoruz
+            Wir bieten umfassende Lösungen für alle Ihre Immobilienbedürfnisse
           </p>
         </div>
 

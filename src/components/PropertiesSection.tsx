@@ -7,13 +7,13 @@ const PropertiesSection = () => {
     {
       id: 1,
       image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "Modern Villa mit Garten in München",
+      title: "Moderne Villa mit Garten in München",
       location: "München, Bayern",
       price: "850.000€",
       beds: 4,
       baths: 3,
       area: 180,
-      type: "Satılık"
+      type: "Zu verkaufen"
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ const PropertiesSection = () => {
       beds: 3,
       baths: 2,
       area: 150,
-      type: "Satılık"
+      type: "Zu verkaufen"
     },
     {
       id: 3,
@@ -35,7 +35,7 @@ const PropertiesSection = () => {
       beds: 5,
       baths: 2,
       area: 200,
-      type: "Satılık"
+      type: "Zu verkaufen"
     },
     {
       id: 4,
@@ -46,7 +46,7 @@ const PropertiesSection = () => {
       beds: 2,
       baths: 1,
       area: 85,
-      type: "Satılık"
+      type: "Zu verkaufen"
     },
     {
       id: 5,
@@ -57,7 +57,7 @@ const PropertiesSection = () => {
       beds: 6,
       baths: 4,
       area: 350,
-      type: "Satılık"
+      type: "Zu verkaufen"
     },
     {
       id: 6,
@@ -68,7 +68,7 @@ const PropertiesSection = () => {
       beds: 3,
       baths: 1,
       area: 95,
-      type: "Satılık"
+      type: "Zu verkaufen"
     }
   ];
 
@@ -77,10 +77,10 @@ const PropertiesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Öne Çıkan <span className="gradient-text">Gayrimenkuller</span>
+            Ausgewählte <span className="gradient-text">Immobilien</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Size en uygun gayrimenkulleri bulmak için özenle seçilmiş portföyümüzü keşfedin
+            Entdecken Sie unser sorgfältig ausgewähltes Portfolio, um die perfekte Immobilie für Sie zu finden
           </p>
         </div>
 
@@ -92,7 +92,7 @@ const PropertiesSection = () => {
 
         <div className="text-center mt-12">
           <button className="bg-primary text-white px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors font-semibold">
-            Tüm Gayrimenkulleri Görüntüle
+            Alle Immobilien anzeigen
           </button>
         </div>
       </div>

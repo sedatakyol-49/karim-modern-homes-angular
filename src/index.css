@@ -16,7 +16,7 @@
     --popover: 255 255 255;
     --popover-foreground: 15 23 42;
 
-    --primary: 30 58 138;
+    --primary: 45 55 72;
     --primary-foreground: 255 255 255;
 
     --secondary: 241 245 249;
@@ -25,26 +25,26 @@
     --muted: 248 250 252;
     --muted-foreground: 100 116 139;
 
-    --accent: 234 179 8;
-    --accent-foreground: 15 23 42;
+    --accent: 183 121 31;
+    --accent-foreground: 255 255 255;
 
     --destructive: 239 68 68;
     --destructive-foreground: 255 255 255;
 
     --border: 226 232 240;
     --input: 226 232 240;
-    --ring: 30 58 138;
+    --ring: 45 55 72;
 
     --radius: 0.75rem;
 
     --sidebar-background: 255 255 255;
     --sidebar-foreground: 15 23 42;
-    --sidebar-primary: 30 58 138;
+    --sidebar-primary: 45 55 72;
     --sidebar-primary-foreground: 255 255 255;
     --sidebar-accent: 241 245 249;
     --sidebar-accent-foreground: 15 23 42;
     --sidebar-border: 226 232 240;
-    --sidebar-ring: 30 58 138;
+    --sidebar-ring: 45 55 72;
   }
 
   .dark {
@@ -57,8 +57,8 @@
     --popover: 2 6 23;
     --popover-foreground: 248 250 252;
 
-    --primary: 59 130 246;
-    --primary-foreground: 15 23 42;
+    --primary: 71 85 105;
+    --primary-foreground: 255 255 255;
 
     --secondary: 30 41 59;
     --secondary-foreground: 248 250 252;
@@ -66,7 +66,7 @@
     --muted: 30 41 59;
     --muted-foreground: 148 163 184;
 
-    --accent: 251 191 36;
+    --accent: 217 154 42;
     --accent-foreground: 15 23 42;
 
     --destructive: 239 68 68;
@@ -74,15 +74,15 @@
 
     --border: 30 41 59;
     --input: 30 41 59;
-    --ring: 59 130 246;
+    --ring: 71 85 105;
     --sidebar-background: 2 6 23;
     --sidebar-foreground: 248 250 252;
-    --sidebar-primary: 59 130 246;
-    --sidebar-primary-foreground: 15 23 42;
+    --sidebar-primary: 71 85 105;
+    --sidebar-primary-foreground: 255 255 255;
     --sidebar-accent: 30 41 59;
     --sidebar-accent-foreground: 248 250 252;
     --sidebar-border: 30 41 59;
-    --sidebar-ring: 59 130 246;
+    --sidebar-ring: 71 85 105;
   }
 }
 
@@ -98,11 +98,11 @@
 
 @layer utilities {
   .gradient-bg {
-    background: linear-gradient(135deg, rgb(30, 58, 138) 0%, rgb(59, 130, 246) 50%, rgb(147, 197, 253) 100%);
+    background: linear-gradient(135deg, rgb(45, 55, 72) 0%, rgb(71, 85, 105) 50%, rgb(100, 116, 139) 100%);
   }
   
   .gradient-text {
-    background: linear-gradient(135deg, rgb(30, 58, 138), rgb(234, 179, 8));
+    background: linear-gradient(135deg, rgb(45, 55, 72), rgb(183, 121, 31));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

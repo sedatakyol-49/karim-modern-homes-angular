@@ -6,11 +6,11 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { label: 'Anasayfa', href: '#home' },
-    { label: 'Gayrimenkuller', href: '#properties' },
-    { label: 'Hizmetler', href: '#services' },
-    { label: 'Hakkımızda', href: '#about' },
-    { label: 'İletişim', href: '#contact' },
+    { label: 'Startseite', href: '#home' },
+    { label: 'Immobilien', href: '#properties' },
+    { label: 'Dienstleistungen', href: '#services' },
+    { label: 'Über uns', href: '#about' },
+    { label: 'Kontakt', href: '#contact' },
   ];
 
   return (
@@ -19,9 +19,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">K</span>
-            </div>
+            <img 
+              src="https://www.karim-immobilien.de/media/logo_karim_immobilien_weiss_farbe.svg" 
+              alt="Karim Immobilien Logo"
+              className="h-10 w-auto"
+            />
             <span className="text-xl font-bold gradient-text">Karim Immobilien</span>
           </div>
 

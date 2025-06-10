@@ -10,14 +10,16 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">K</span>
-              </div>
+              <img 
+                src="https://www.karim-immobilien.de/media/logo_karim_immobilien_weiss_farbe.svg" 
+                alt="Karim Immobilien Logo"
+                className="h-10 w-auto"
+              />
               <span className="text-xl font-bold">Karim Immobilien</span>
             </div>
             <p className="text-gray-400 leading-relaxed">
-              25 yıllık deneyimimizle Almanya'da gayrimenkul sektöründe güvenilir ortağınız. 
-              Hayalinizdeki evi bulmanızda size yardımcı oluyoruz.
+              Mit 25 Jahren Erfahrung sind wir Ihr vertrauensvoller Partner im deutschen Immobilienmarkt. 
+              Wir helfen Ihnen dabei, Ihr Traumhaus zu finden.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
@@ -37,31 +39,31 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Hızlı Bağlantılar</h3>
+            <h3 className="text-lg font-semibold mb-6">Schnelllinks</h3>
             <ul className="space-y-3">
-              <li><a href="#home" className="text-gray-400 hover:text-white transition-colors">Anasayfa</a></li>
-              <li><a href="#properties" className="text-gray-400 hover:text-white transition-colors">Gayrimenkuller</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Hizmetler</a></li>
-              <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">Hakkımızda</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">İletişim</a></li>
+              <li><a href="#home" className="text-gray-400 hover:text-white transition-colors">Startseite</a></li>
+              <li><a href="#properties" className="text-gray-400 hover:text-white transition-colors">Immobilien</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Dienstleistungen</a></li>
+              <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">Über uns</a></li>
+              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Kontakt</a></li>
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Hizmetlerimiz</h3>
+            <h3 className="text-lg font-semibold mb-6">Unsere Dienstleistungen</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Gayrimenkul Satışı</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Emlak Değerlendirmesi</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Kiralama Hizmetleri</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Yatırım Danışmanlığı</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Hukuki Danışmanlık</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Immobilienverkauf</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Immobilienbewertung</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Vermietungsservice</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Investmentberatung</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Rechtsberatung</a></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">İletişim</h3>
+            <h3 className="text-lg font-semibold mb-6">Kontakt</h3>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary" />
@@ -84,7 +86,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Karim Immobilien. Tüm hakları saklıdır.
+            © 2024 Karim Immobilien. Alle Rechte vorbehalten.
           </p>
         </div>
       </div>

@@ -139,29 +139,29 @@ const ImmobilienDetail = () => {
     <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
       <main className="flex-1 pt-24 pb-12">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <button onClick={() => navigate(-1)} className="flex items-center text-cyan-600 hover:text-cyan-800 mb-6 font-semibold"><ArrowLeft className="w-5 h-5 mr-2" />Zurück</button>
+        <div className="container mx-auto px-2 sm:px-4 max-w-6xl">
+          <button onClick={() => navigate(-1)} className="flex items-center text-cyan-600 hover:text-cyan-800 mb-6 font-semibold text-base sm:text-lg"><ArrowLeft className="w-5 h-5 mr-2" />Zurück</button>
           <div className="flex flex-col md:flex-row gap-8">
             {/* Sol: Büyük görsel */}
             <div className="flex-1 flex flex-col items-center">
-              <img src={property.image} alt={property.title} className="w-full max-w-xl h-80 object-cover rounded-2xl shadow-lg mb-4" />
-              <div className="flex gap-4 mt-2">
+              <img src={property.image} alt={property.title} className="w-full max-w-xl h-56 sm:h-80 object-cover rounded-2xl shadow-lg mb-4" />
+              <div className="flex flex-wrap gap-4 mt-2 justify-center">
                 <span className="bg-cyan-600 text-white px-3 py-1 rounded-full text-sm font-medium">{property.type}</span>
                 <span className="flex items-center text-gray-500 text-sm"><MapPin className="w-4 h-4 mr-1" />{property.location}</span>
               </div>
             </div>
             {/* Sağ: Özet kutusu */}
-            <div className="w-full md:w-96 bg-gray-50 rounded-2xl shadow-lg p-8 flex flex-col justify-between">
+            <div className="w-full md:w-96 bg-gray-50 rounded-2xl shadow-lg p-6 sm:p-8 flex flex-col justify-between mt-4 md:mt-0">
               <div>
-                <h1 className="text-2xl font-bold text-gray-900 mb-2">{property.title}</h1>
-                <div className="flex items-center gap-4 text-gray-700 mb-4">
+                <h1 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{property.title}</h1>
+                <div className="flex flex-wrap gap-4 text-gray-700 mb-4">
                   <div className="flex items-center"><Bed className="w-5 h-5 mr-1" />{property.beds} Zimmer</div>
                   <div className="flex items-center"><Bath className="w-5 h-5 mr-1" />{property.baths} Bad</div>
                   <div className="flex items-center"><Square className="w-5 h-5 mr-1" />{property.area}m²</div>
                 </div>
-                <div className="text-lg text-gray-700 mb-6">{property.description}</div>
+                <div className="text-base sm:text-lg text-gray-700 mb-6">{property.description}</div>
               </div>
-              <div className="text-3xl font-bold text-cyan-600 mb-4">{property.price}</div>
+              <div className="text-2xl sm:text-3xl font-bold text-cyan-600 mb-4">{property.price}</div>
               <div className="border-t pt-4 mt-4">
                 <h2 className="text-lg font-semibold mb-2 text-gray-800">Kontakt</h2>
                 <div className="flex items-center gap-2 text-gray-700 mb-1"><Phone className="w-4 h-4 mr-1" />+49 (0) 761 / 152 298 545</div>
@@ -171,8 +171,8 @@ const ImmobilienDetail = () => {
           </div>
           {/* Alt: Özellikler */}
           {property.features && (
-            <div className="mt-12 bg-gray-50 rounded-2xl shadow p-8 max-w-4xl mx-auto">
-              <h2 className="text-xl font-bold mb-4 text-gray-900">Spezifikationen</h2>
+            <div className="mt-8 sm:mt-12 bg-gray-50 rounded-2xl shadow p-6 sm:p-8 max-w-4xl mx-auto">
+              <h2 className="text-lg sm:text-xl font-bold mb-4 text-gray-900">Spezifikationen</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {property.features.map((f, i) => (
                   <div key={i} className="flex items-center gap-3 text-gray-700">

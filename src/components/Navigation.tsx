@@ -19,7 +19,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm" style={{ scrollBehavior: 'smooth' }}>
+    <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm" style={{ scrollBehavior: 'smooth' }}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}

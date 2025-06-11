@@ -19,9 +19,9 @@ const Vermietung = () => {
       {/* Navigation yüksekliği kadar padding-top verelim */}
       <div style={{ backgroundColor: 'rgb(8, 145, 178)' }} className="w-full pt-24 pb-10">
         <div className="max-w-4xl mx-auto px-6 rounded-xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">Vermietung</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">Kontakt </h1>
           <p className="text-lg text-white text-center max-w-2xl mx-auto">
-            Wir finden den passenden Mieter für Ihre Immobilie und übernehmen die gesamte Abwicklung – schnell, zuverlässig und transparent.
+            Haben Sie Fragen oder möchten Sie eine Beratung? Wir sind gerne für Sie da.
           </p>
         </div>
       </div>

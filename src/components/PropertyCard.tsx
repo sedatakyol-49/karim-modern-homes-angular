@@ -74,7 +74,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           </div>
         </div>
         
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between flex-col sm:flex-row gap-4 sm:gap-0">
           <div className="text-2xl font-bold text-cyan-600">
             {price}
           </div>

@@ -1,6 +1,7 @@
-
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropertyCard from './PropertyCard';
+import { Button } from './ui/button';
 
 const PropertiesSection = () => {
   const properties = [
@@ -86,7 +87,14 @@ const PropertiesSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {properties.map((property) => (
-            <PropertyCard key={property.id} {...property} />
+            <div key={property.id} className="relative">
+              <PropertyCard {...property} />
+              <Link to={`/immobilien/${property.id}`}
+                className="absolute bottom-8 right-8 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2 rounded-lg font-semibold shadow transition-colors text-center"
+                style={{minWidth: '100px'}}>
+                Details
+              </Link>
+            </div>
           ))}
         </div>
 

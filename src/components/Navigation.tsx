@@ -1,64 +1,48 @@
-
 import React, { useState } from 'react';
-import { Menu, X, Phone, Mail, MapPin, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   const menuItems = [
-    { label: 'STARTSEITE', href: '#startseite' },
-    { label: 'IMMOBILIEN-PORTFOLIO', href: '#immobilien-portfolio' },
-    { label: 'IMMOBILIENVERKAUF', href: '#immobilienverkauf' },
-    { label: 'VERMIETUNG', href: '#vermietung' },
-    { label: 'IMMOBILIENBEWERTUNG', href: '#immobilienbewertung' },
-    { label: 'EINKAUF', href: '#einkauf' },
-    { label: 'DISCRETE SALE', href: '#discrete-sale' },
-    { label: 'PROVISION', href: '#provision' },
-    { label: 'ÜBER KARIM IMMOBILIEN', href: '#ueber-karim-immobilien' },
-    { label: 'KONTAKT', href: '#kontakt' },
+    { label: 'Startseite', href: '#startseite' },
+    { label: 'Immobilien-Portfolio', href: '#immobilien-portfolio' },
+    { label: 'Verkauf', href: '#immobilienverkauf' },
+    { label: 'Vermietung', href: '#vermietung' },
+    { label: 'Bewertung', href: '#immobilienbewertung' },
+    { label: 'Einkauf', href: '#einkauf' },
+    { label: 'Diskret Sale', href: '#discrete-sale' },
+    { label: 'Provision', href: '#provision' },
+    { label: 'Über Uns', href: '#ueber-karim-immobilien' },
+    { label: 'Kontakt', href: '#kontakt' },
   ];
 
-  const handleDropdownToggle = (label: string) => {
-    setOpenDropdown(openDropdown === label ? null : label);
-  };
-
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm">
+    <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm" style={{ scrollBehavior: 'smooth' }}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <img 
-              src="https://www.karim-immobilien.de/media/logo_karim_immobilien_weiss_farbe.svg" 
+          <div className="flex items-center space-x-3 bg-white rounded-lg px-2 py-1 shadow-md">
+            <img
+              src="https://www.karim-immobilien.de/media/logo_karim_immobilien_weiss_farbe.svg"
               alt="Karim Immobilien Logo"
-              className="h-12 w-auto"
+              className="h-12 w-auto drop-shadow-lg"
             />
           </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-1">
+          {/* Desktop Menu - Scrollable */}
+          <div className="hidden lg:flex overflow-x-auto scrollbar-none whitespace-nowrap space-x-1 flex-1 justify-center px-4">
             {menuItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium px-3 py-2 rounded-lg hover:bg-accent/10 text-sm"
+                to={item.href.replace('#', '/')}
+                className="text-foreground font-medium px-3 py-2 rounded-lg transition-colors border-b-2 border-transparent hover:border-black text-sm"
+                style={{scrollBehavior:'smooth'}}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
-          </div>
-
-          {/* Contact Info */}
-          <div className="hidden xl:flex items-center space-x-4 text-sm text-muted-foreground">
-            <div className="flex items-center space-x-1">
-              <Phone className="w-4 h-4" />
-              <span>+49 (0) 761 / 152 298 545</span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <Mail className="w-4 h-4" />
-              <span>info@karim-immobilien.de</span>
-            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -72,34 +56,17 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border">
+          <div className="lg:hidden py-4 border-t border-border bg-white/95 rounded-b-xl shadow-md">
             {menuItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
-                className="block py-3 text-foreground hover:text-primary transition-colors"
+                to={item.href.replace('#', '/')}
+                className="block py-3 px-4 text-foreground hover:text-primary font-semibold rounded-lg hover:bg-primary/10 focus:bg-primary/20 focus:text-primary active:bg-primary/20 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
-            <div className="mt-4 pt-4 border-t border-border space-y-2 text-sm text-muted-foreground">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4" />
-                <span>+49 (0) 761 / 152 298 545</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4" />
-                <span>info@karim-immobilien.de</span>
-              </div>
-              <div className="flex items-start space-x-2">
-                <MapPin className="w-4 h-4 mt-1" />
-                <div>
-                  <p>Mühlhauser Straße 10</p>
-                  <p>DE-79110 Freiburg i. Br.</p>
-                </div>
-              </div>
-            </div>
           </div>
         )}
       </div>

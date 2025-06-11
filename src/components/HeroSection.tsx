@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Search, MapPin, Home, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -49,7 +48,7 @@ const HeroSection = () => {
                 <label className="text-sm font-medium text-gray-700">Immobilientyp</label>
                 <div className="relative">
                   <Home className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
-                  <select className="w-full h-12 pl-10 pr-4 border border-gray-200 rounded-lg focus:border-primary focus:outline-none">
+                  <select className="w-full h-12 pl-10 pr-4 border border-gray-200 rounded-lg focus:border-primary focus:outline-none bg-white text-gray-800 hover:bg-blue-50 focus:bg-blue-50">
                     <option>Wohnung</option>
                     <option>Haus</option>
                     <option>Büro</option>
@@ -62,7 +61,7 @@ const HeroSection = () => {
                 <label className="text-sm font-medium text-gray-700">Preisbereich</label>
                 <div className="relative">
                   <TrendingUp className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
-                  <select className="w-full h-12 pl-10 pr-4 border border-gray-200 rounded-lg focus:border-primary focus:outline-none">
+                  <select className="w-full h-12 pl-10 pr-4 border border-gray-200 rounded-lg focus:border-primary focus:outline-none bg-white text-gray-800 hover:bg-blue-50 focus:bg-blue-50">
                     <option>0 - 200.000€</option>
                     <option>200.000 - 500.000€</option>
                     <option>500.000 - 1.000.000€</option>
@@ -71,7 +70,7 @@ const HeroSection = () => {
                 </div>
               </div>
               
-              <Button className="h-12 bg-primary hover:bg-primary/90 text-white font-semibold">
+              <Button className="h-12 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold shadow-md transition-colors duration-200">
                 <Search className="w-5 h-5 mr-2" />
                 Suchen
               </Button>

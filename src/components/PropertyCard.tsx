@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { MapPin, Bed, Bath, Square, Heart, Share } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -34,7 +33,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           className="w-full h-64 object-cover"
         />
         <div className="absolute top-4 left-4">
-          <span className="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+          <span className="bg-cyan-600 text-white px-3 py-1 rounded-full text-sm font-medium">
             {type}
           </span>
         </div>
@@ -76,12 +75,9 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
         </div>
         
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-primary">
+          <div className="text-2xl font-bold text-cyan-600">
             {price}
           </div>
-          <Button className="bg-primary hover:bg-primary/90 text-white">
-            Details
-          </Button>
         </div>
       </div>
     </div>

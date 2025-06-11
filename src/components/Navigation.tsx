@@ -56,7 +56,7 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border bg-white/95 rounded-b-xl shadow-md">
+          <div className="lg:hidden py-4 bg-white/95 rounded-b-xl shadow-md">
             {menuItems.map((item) => (
               <Link
                 key={item.label}

@@ -138,7 +138,7 @@ const ImmobilienDetail = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
-      <main className="flex-1 pt-24 pb-12">
+      <main className="flex-1 pt-24 pb-12 mt-4 sm:mt-8">
         <div className="container mx-auto px-2 sm:px-4 max-w-6xl">
           <button onClick={() => navigate(-1)} className="flex items-center text-cyan-600 hover:text-cyan-800 mb-6 font-semibold text-base sm:text-lg"><ArrowLeft className="w-5 h-5 mr-2" />Zurück</button>
           <div className="flex flex-col md:flex-row gap-8">

@@ -1,58 +1,50 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Calculator, FileText, TrendingUp, Mail } from 'lucide-react';
-
-const steps = [
-  { icon: Calculator, title: 'Objektaufnahme', desc: 'Erstgespräch & Aufnahme aller relevanten Immobiliendaten.' },
-  { icon: TrendingUp, title: 'Marktanalyse', desc: 'Vergleich mit ähnlichen Objekten & aktuelle Marktpreise.' },
-  { icon: FileText, title: 'Bewertungsbericht', desc: 'Ausführlicher Bericht & Preisempfehlung für Ihre Immobilie.' },
-];
 
 const Immobilienbewertung = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-cyan-50 via-white to-white">
+    <div className="min-h-screen flex flex-col bg-cyan-50">
       <Navigation />
-      <main className="flex-1 pt-24 pb-12 flex min-h-screen">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row gap-12 items-center md:items-center">
-          {/* Sol: Bilgi kutuları */}
-          <div className="flex-1 w-full max-w-xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Immobilienbewertung</h1>
-            <p className="text-lg text-gray-600 mb-10 max-w-xl">
-              Lassen Sie Ihre Immobilie professionell bewerten – für einen realistischen Marktpreis und eine erfolgreiche Vermarktung.
-            </p>
-            <div className="space-y-6">
-              {steps.map((step, idx) => (
-                <div key={idx} className="flex items-start gap-4 bg-white rounded-xl shadow p-5 border border-gray-100">
-                  <span className="w-12 h-12 flex items-center justify-center rounded-full bg-cyan-100 text-cyan-700 shadow">
-                    <step.icon className="w-7 h-7" />
-                  </span>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-1">{step.title}</h3>
-                    <p className="text-gray-600 text-sm">{step.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Sağ: Call to action */}
-          <div className="flex-1 w-full max-w-md flex flex-col justify-center  item-center h-full ml-40">
-            <div className="bg-cyan-600 rounded-2xl shadow-xl p-8 text-white flex flex-col items-center">
-              <Mail className="w-10 h-10 mb-4" />
-              <h2 className="text-2xl font-bold mb-2">Kostenlose Bewertung anfragen</h2>
-              <p className="mb-6 text-cyan-100 text-center">
-                Kontaktieren Sie uns für eine unverbindliche und kostenfreie Immobilienbewertung.
-              </p>
-              <a
-                href="mailto:info@karim-immobilien.de"
-                className="bg-white text-cyan-700 font-semibold px-6 py-3 rounded-lg shadow hover:bg-cyan-50 transition-colors"
-              >
-                Jetzt anfragen
-              </a>
-            </div>
-          </div>
+      <main className="flex-1 pt-24 pb-12">
+      <section
+        style={{ backgroundColor: 'rgb(8, 145, 178)' }}
+        className="py-12 mb-12"
+      >
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Immobilien-Bewertung
+          </h1>
         </div>
+      </section>
+
+      {/* Detaylı metin beyaz arka planda */}
+      <main className="flex-1 pb-12">
+        <div className="container mx-auto px-4 max-w-4xl bg-white rounded-lg shadow p-8">
+          <p className="mb-4 text-gray-700 leading-relaxed">
+            Eine Bewertung der Immobilie ist notwendig und die Grundvoraussetzung für einen zufriedenen Verkauf. Mit unserem Zugang und Know-How zum und über den Markt wie auch den Preisen, erhalten Sie einen optimalen, fairen und realistischen Verkaufspreis.
+          </p>
+          <p className="mb-4 text-gray-700 leading-relaxed">
+            Unser Rat ist: Nutzen Sie die Wertevermittlung durch unsere Experten
+          </p>
+          <p className="mb-4 text-gray-700 leading-relaxed">
+            Es gibt viele Einflussfaktoren in der Bewertung des Preises und wir kennen uns in diesem Bereich bestens aus. Wir kennen jeden Faktor für die Preisermittlung und wissen ihn zu bewerten und ideal einzusetzen. Das Ziel ist, dass Sie nicht unter Wert verkaufen, sondern mit einem erfahrenen Experten den Wert ermitteln und einen profitablen Preis festlegen.
+          </p>
+          <p className="mb-4 text-gray-700 leading-relaxed">
+            Wir finden den Verkaufspreis, von welchem Sie langfristig profitieren werden. Nutzen Sie unsere langjährige Expertise im Bereich der Bewertung für Immobilien. Wir sind aktiv in Baden -Württemberg wie auch in anderen Bundesländern Deutschlands.
+          </p>
+          <p className="mb-4 text-gray-700 leading-relaxed">
+            Gerne kümmern wir uns um die komplette Arbeit, welche Ihnen viel Zeit kostet. Mit rechtssicheren Daten zur Bewertung Ihres Objektes, erhalten Sie in angemessener Zeit ein Ergebnis von uns.
+          </p>
+          <p className="mb-4 text-gray-700 leading-relaxed">
+            Auf Basis von Erfahrungswerten und vergleichbaren Objekten ist der ermittelte Preis nicht nur für Sie gewinnbringend, sondern auch ganzheitlich ehrlich und realistisch.
+          </p>
+          <p className="mb-4 text-gray-700 leading-relaxed">
+            Neben der Preisermittlung erhalten Sie von uns die Erarbeitung professioneller Unterlagen für den anschließenden Verkauf und der Prozessabwicklung. Dazu gehören auch Marktwertgutachten und visuelle Werbeunterlagen, welche sorgfältig für die gesamte Verkaufsabwicklung individuell gestaltet werden.
+          </p>
+          <p className="mb-4 text-gray-700 leading-relaxed">Wir freuen uns auf Sie!</p>
+        </div>
+      </main>
       </main>
       <Footer />
     </div>

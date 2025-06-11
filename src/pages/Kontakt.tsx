@@ -1,50 +1,81 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Home, ClipboardList, CheckCircle, FileText, Users } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
-const steps = [
-  { icon: Home, title: 'Inserat & Vermarktung', desc: 'Wir präsentieren Ihre Immobilie optimal am Markt.' },
-  { icon: ClipboardList, title: 'Besichtigungen', desc: 'Wir organisieren und führen alle Besichtigungen durch.' },
-  { icon: CheckCircle, title: 'Bonitätsprüfung', desc: 'Sichere Auswahl durch sorgfältige Prüfung der Interessenten.' },
-  { icon: FileText, title: 'Mietvertrag', desc: 'Rechtssichere Erstellung und Abwicklung des Mietvertrags.' },
-  { icon: Users, title: 'Übergabe & Nachbetreuung', desc: 'Wir begleiten Sie bis zur Schlüsselübergabe und darüber hinaus.' },
-];
-
-const Vermietung = () => {
+const Kontakt = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-white via-cyan-50 to-white">
+    <div className="min-h-screen flex flex-col bg-gray-50">
       <Navigation />
+      <main className="flex-1 pt-24 pb-12">
+        {/* Full-width arka planlı başlık alanı */}
+        <section  style={{ backgroundColor: 'rgb(8, 145, 178)' }}  className=" py-12 mb-12">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">Kontakt</h1>
+            <p className="text-lg text-white text-center">
+              Kontaktieren Sie uns für alle Fragen rund um Immobilien – wir freuen uns auf Ihre Nachricht!
+            </p>
+          </div>
+        </section>
 
-      {/* Navigation yüksekliği kadar padding-top verelim */}
-      <div style={{ backgroundColor: 'rgb(8, 145, 178)' }} className="w-full pt-24 pb-10">
-        <div className="max-w-4xl mx-auto px-6 rounded-xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">Kontakt </h1>
-          <p className="text-lg text-white text-center max-w-2xl mx-auto">
-            Haben Sie Fragen oder möchten Sie eine Beratung? Wir sind gerne für Sie da.
-          </p>
-        </div>
-      </div>
-
-      <main className="flex-1 pt-12 pb-12">
         <div className="container mx-auto px-4">
-          <div className="overflow-x-auto pb-4">
-            <div className="flex gap-6 min-w-[600px] md:min-w-full">
-              {steps.map((step, idx) => (
-                <div key={idx} className="flex-shrink-0 w-72 bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
-                  <step.icon className="w-12 h-12 text-cyan-600 mb-4" />
-                  <h2 className="text-lg font-semibold mb-2 text-gray-800">{step.title}</h2>
-                  <p className="text-gray-600 text-sm">{step.desc}</p>
-                </div>
-              ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-white rounded-2xl shadow p-8 flex flex-col justify-center border border-gray-100">
+              <h2 className="text-xl font-semibold mb-6 text-gray-800 flex items-center">
+                <Mail className="w-6 h-6 mr-2 text-cyan-600" /> E-Mail
+              </h2>
+              <p className="mb-4 text-gray-600">info@karim-immobilien.de</p>
+              <h2 className="text-xl font-semibold mb-6 text-gray-800 flex items-center">
+                <Phone className="w-6 h-6 mr-2 text-cyan-600" /> Telefon
+              </h2>
+              <p className="mb-4 text-gray-600">+49 (0) 761 / 152 298 545</p>
+              <h2 className="text-xl font-semibold mb-6 text-gray-800 flex items-center">
+                <MapPin className="w-6 h-6 mr-2 text-cyan-600" /> Adresse
+              </h2>
+              <p className="text-gray-600">
+                Mühlhauser Straße 10
+                <br />
+                DE-79110 Freiburg i. Br.
+              </p>
             </div>
+            <form className="bg-white rounded-2xl shadow p-8 space-y-6 border border-gray-100">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                <input
+                  type="text"
+                  className="w-full h-12 px-4 border border-gray-200 rounded-lg focus:border-primary focus:outline-none"
+                  placeholder="Ihr Name"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">E-Mail</label>
+                <input
+                  type="email"
+                  className="w-full h-12 px-4 border border-gray-200 rounded-lg focus:border-primary focus:outline-none"
+                  placeholder="Ihre E-Mail-Adresse"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Nachricht</label>
+                <textarea
+                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:border-primary focus:outline-none resize-none"
+                  rows={5}
+                  placeholder="Ihre Nachricht..."
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="w-full h-12 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors"
+              >
+                Nachricht senden
+              </button>
+            </form>
           </div>
         </div>
       </main>
-
       <Footer />
     </div>
   );
 };
 
-export default Vermietung;
+export default Kontakt;

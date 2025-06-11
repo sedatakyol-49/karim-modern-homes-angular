@@ -87,17 +87,7 @@ const PropertiesSection = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {properties.map((property) => (
-            <div key={property.id} className="relative flex flex-col h-full">
-              <PropertyCard {...property} />
-              <div className="absolute bottom-8 right-8 left-8 sm:left-auto flex justify-end">
-                <Link to={`/immobilien/${property.id}`}
-                  className="w-full sm:w-auto">
-                  <button className="w-full sm:w-auto bg-cyan-700 text-white hover:bg-cyan-800 font-semibold rounded-lg px-6 py-2 shadow transition-colors text-center">
-                    Details
-                  </button>
-                </Link>
-              </div>
-            </div>
+            <PropertyCard key={property.id} {...property} />
           ))}
         </div>
 

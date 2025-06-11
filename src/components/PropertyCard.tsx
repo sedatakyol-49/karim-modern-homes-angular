@@ -15,6 +15,7 @@ interface PropertyCardProps {
 }
 
 const PropertyCard: React.FC<PropertyCardProps> = ({
+  id,
   image,
   title,
   location,
@@ -78,6 +79,13 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           <div className="text-2xl font-bold text-cyan-600">
             {price}
           </div>
+        </div>
+        <div className="mt-6">
+          <a href={`/immobilien/${id}`} className="block w-full">
+            <button className="w-full bg-cyan-700 text-white hover:bg-cyan-800 font-semibold rounded-lg px-6 py-2 shadow transition-colors text-center">
+              Details
+            </button>
+          </a>
         </div>
       </div>
     </div>

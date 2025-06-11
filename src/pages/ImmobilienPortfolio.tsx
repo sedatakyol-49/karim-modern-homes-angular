@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
 const properties = [
   {
@@ -92,9 +93,9 @@ const ImmobilienPortfolio = () => {
                   <p className="text-sm text-gray-500 mb-4">
                     🛏 {property.beds} · 🛁 {property.baths} · 📐 {property.area} m²
                   </p>
-                  <button className="mt-auto bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg font-semibold shadow transition-colors">
+                  <Link to={`/immobilien/${property.id}`} className="mt-auto bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg font-semibold shadow transition-colors">
                     Details ansehen
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
